@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=TST
+Comment=Tabbed ST terminal
+Exec=tst
+Terminal=false
+Type=Application
+Categories=System;TerminalEmulator;
