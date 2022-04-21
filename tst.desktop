@@ -2,6 +2,7 @@
 Name=TST
 Comment=Tabbed ST terminal
 Exec=tst
+Icon=tst
 Terminal=false
 Type=Application
 Categories=System;TerminalEmulator;

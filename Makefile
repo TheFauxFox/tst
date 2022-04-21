@@ -28,6 +28,8 @@ install:
 	chmod 755 tst.desktop
 	cp -f st tabbed xembed tst ${DESTDIR}${PREFIX}/bin
 	cp -f tst.desktop ${DESTDIR}${PREFIX}/share/applications
+	mkdir -p $(DESTDIR)$(PREFIX)/share/icons
+	cp -f tst.png $(DESTDIR)$(PREFIX)/share/icons
 
 uninstall:
 	@echo Removing [TST, ST, Tabbed, XEmbed]
