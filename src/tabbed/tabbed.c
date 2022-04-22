@@ -1396,6 +1396,10 @@ usage(void)
 int
 main(int argc, char *argv[])
 {
+	argc = 3;
+	argv[0] = "tabbed";
+	argv[1] = "st";
+	argv[2] = "-w";
 	Bool detach = False;
 	int replace = 0;
 	char *pstr;
