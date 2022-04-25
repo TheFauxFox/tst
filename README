@@ -1,29 +1,10 @@
-Combined ST and Tabbed for the almost perfect terminal experience
+TST - Tabbed Simple Terminal
+============================
 
-Patches:
-  ST:
-    boxdraw
-    font2
-    netwmicon
-    newterm
-    scrollback
-    sixel
-    undercurl
-    anysize
-    alpha
-  Tabbed:
-    alpha
-    xft
-    autohide
-    bar-height
-    clientnumber
-    icon
+A hacked together mod of Suckless's tabbed and st to make a tabbed terminal
+that sucks less. The root project is tabbed, renamed to tst, with st being built
+as a library in the background.
 
-Installation:
-  make && sudo make install
+To build you will need to install
+    libharfbuzz-dev libfontconfig1-dev libfreetype-dev libx11-dev libxft-dev libbz2-dev
 
-Uninstallation:
-  sudo make uninstall
-
-By default TST, tabbed, st, and xembed are all installed to /usr/local/bin
-Modify config.mk to change installation directory

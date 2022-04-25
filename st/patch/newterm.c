@@ -13,7 +13,7 @@ newterm(const Arg* a)
 			break;
 		case 0:
 			res = chdir(getcwd_by_pid(pid));
-			execlp("st", "./st", NULL);
+			execlp("tst", "./tst", NULL);
 			break;
 		default:
 			exit(0);

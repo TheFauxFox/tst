@@ -2506,8 +2506,11 @@ usage(void)
 }
 
 int
-main(int argc, char *argv[])
+launch(int argc, char *argv[])
 {
+	argc = 2;
+	argv[0] = "st";
+	argv[1] = "-w";
 	xw.l = xw.t = 0;
 	xw.isfixed = False;
 	xsetcursor(cursorshape);
@@ -2578,3 +2581,8 @@ run:
 
 	return 0;
 }
+
+// int main(int argc, char *argv[])
+// {
+// 	launch(argc, argv);
+// }
