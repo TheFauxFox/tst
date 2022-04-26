@@ -20,7 +20,7 @@ LIGATURES_INC = `$(PKG_CONFIG) --cflags harfbuzz`
 LIGATURES_LIBS = `$(PKG_CONFIG) --libs harfbuzz`
 
 # freetype
-FREETYPELIBS = -lfontconfig -lXft
+FREETYPELIBS = -lfontconfig ./libs/libXft.a
 FREETYPEINC = /usr/include/freetype2
 # OpenBSD (uncomment)
 #FREETYPEINC = ${X11INC}/freetype2
@@ -31,9 +31,9 @@ INCS = -I. -I/usr/include -I$(X11INC) -I${FREETYPEINC} \
        `$(PKG_CONFIG) --cflags freetype2` \
        $(LIGATURES_INC)
 LIBS = -L/usr/lib -lc -L${X11LIB} -lX11 ${FREETYPELIBS} \
-			 -lm -lrt -lX11 -lutil -lXft ${XRENDER} ${XCURSOR}\
+			 -lm -lrt -lX11 -lutil ./libs/libXft.a ${XRENDER} ${XCURSOR}\
        `$(PKG_CONFIG) --libs fontconfig` \
-       `$(PKG_CONFIG) --libs freetype2` \
+       ./libs/libfreetype.a \
        $(LIGATURES_LIBS)
 
 # flags

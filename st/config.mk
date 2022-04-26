@@ -26,9 +26,9 @@ INCS = -I$(X11INC) \
        `$(PKG_CONFIG) --cflags fontconfig` \
        `$(PKG_CONFIG) --cflags freetype2` \
        $(LIGATURES_INC)
-LIBS = -L$(X11LIB) -lm -lrt -lX11 -lutil -lXft ${XRENDER} ${XCURSOR}\
+LIBS = -L$(X11LIB) -lm -lrt -lX11 -lutil ../libs/libXft.a ${XRENDER} ${XCURSOR}\
        `$(PKG_CONFIG) --libs fontconfig` \
-       `$(PKG_CONFIG) --libs freetype2` \
+       ../libs/libfreetype.a -lpng -lz -lbz2 \
        $(LIGATURES_LIBS)
 
 # flags
