@@ -1400,7 +1400,7 @@ main(int argc, char *argv[])
 	argc = 3;
 	argv[0] = "tst";
 	argv[1] = "tst";
-	argv[2] = "-w";
+	argv[2] = "";
 	Bool detach = False;
 	int replace = 0;
 	char *pstr;
